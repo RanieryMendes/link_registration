@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./link_icon.svg" rel="icon" >
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <title> ALL LINKS</title>
+</head>
+<body>
+
+    <div class="container">
+    <h5 class="display-3 text-success text-center">List of Links</h5>
+    <div class="container">
+    <%for(let i = 0; i<links.length; i++){%>
+
+        <div class="card d-flex mb-4 p-3" id='<%=links[i]._id%>'>
+            <h5 class="text-primary card-title"> <%=links[i].title%> </h2>
+            <h6 class="text-secondary"> <%=links[i].description%> </h2>
+            <a class="link mb-2" href='<%=links[i].url%>'>  <%=links[i].url%>  </a>
+            <div class="d-flex">
+            <a  class='btn btn-warning p-2 ' href="/edit/<%=links[i]._id%>">Edit</a>
+            <button class="d-inline btn btn-danger ms-3 p-2" onclick= "delLink('<%=links[i]._id%>')"> Delete Link</button>
+        </div>
+        </div>
+       
+     <%}%>
+    
+     <a href="/"> Add another document</a>
+    </div>
+</div>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+
+
+ 
+</body>
+<script>
+
+    function delLink(id){
+
+        console.log(id)
+
+        var oldID = id
+
+        fetch(`/${id}`, {method:'DELETE'}).then( res=>{
+
+            console.log(res)
+
+            res.json().then(linkID =>{
+
+                console.log(linkID)
+                console.log(linkID._id)
+
+                document.getElementById(linkID._id).remove();
+            })
+
+        })
+    }
+
+    function editLink(){
+
+    }
+
+    
+</script>
+</html>

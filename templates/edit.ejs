@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+</head>
+<body>
+
+    <div class="container">
+    <h4 class="display-3"> EDIT PAGE</h4>
+
+    <form method="POST" action="/edit" class="form">  
+
+        <input class="form-control mb-3" type="text" name='title' id='title' value= '<%=link.title%>'>
+        <input  class="form-control mb-3"type="text" name='description' id='description' value='<%=link.description%>'>
+        <input class="form-control mb-3" type="text" name='url' id='url' value='<%=link.url%>'>
+        <input class="form-control mb-3" type="submit" value="Click to Save">
+
+    </form>
+
+</div>
+    
+</body>
+</html>
