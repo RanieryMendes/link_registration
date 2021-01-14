@@ -12,7 +12,6 @@ const app = express()
 
 app.use('/', router)
 
-app.use(favicon(path.join(__dirname,'images','favicon.ico')));
 
 app.set('views', path.join(__dirname, 'templates'))
 app.set('view engine', 'ejs')
@@ -45,7 +44,7 @@ mongoose.connect('mongodb://localhost/links', { useNewUrlParser: true , useUnifi
 
 
 
-mongoose.connect('mongodb+srv://RanyMendes:Ranyboy1@loginsystem.dnz7i.mongodb.net/link_storage?retryWrites=true&w=majority', { useNewUrlParser: true , useUnifiedTopology: true})
+mongoose.connect(process.env.MONGO_DB_URI, { useNewUrlParser: true , useUnifiedTopology: true})
 const db = mongoose.connection
 
 
