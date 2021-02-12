@@ -4,7 +4,7 @@ This application works as a registration platform for web links that uses MongoA
 
 You can add new links, see and edit all the ones registered, as well as delete any one of them. 
 
-It implments the following technologies:
+## It implments the following technologies:
  
  * HTML
  * Javascript 
@@ -12,5 +12,10 @@ It implments the following technologies:
  * MongoDB 
  * Bootstrap 
  
+# Main Page Screen
 <img src="app_1.png" alt="Main page" >
+
+<br/> <br/>
+
+# All Links Screen
 <img src="app_2.png" alt="All links screen " >
