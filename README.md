@@ -8,7 +8,7 @@ You can add new links, see and edit all the ones registered, as well as delete a
  
  * HTML
  * Javascript 
- * NodeJs
+ * NodeJS
  * MongoDB 
  * Bootstrap 
  
