@@ -12,5 +12,5 @@ It implments the following technologies:
  * MongoDB 
  * Bootstrap 
  
-<img src="app_1" alt="Main page" >
-<img src="app_2" alt="All links screen " >
+<img src="app_1.png" alt="Main page" >
+<img src="app_2.png" alt="All links screen " >
